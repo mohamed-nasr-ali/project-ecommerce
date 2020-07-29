@@ -24,8 +24,3 @@
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
 </IfModule>
-<VirtualHost *:80>
-        ServerName e-commerce-laravel-vue.herokuapp.com
-        DocumentRoot /path/to/public
-        Redirect permanent / http://e-commerce-laravel-vue.herokuapp.com
-</VirtualHost>
