@@ -5,6 +5,11 @@
 
     RewriteEngine On
 
+    # If we receive a forwarded http request from a proxy...
+    RewriteCond %{HTTP:X-Forwarded-Proto} =http
+    RewriteCond %{HTTPS} !=on
+
+
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
@@ -19,3 +24,8 @@
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
 </IfModule>
+<VirtualHost *:80>
+        ServerName e-commerce-laravel-vue.herokuapp.com
+        DocumentRoot /path/to/public
+        Redirect permanent / http://e-commerce-laravel-vue.herokuapp.com
+</VirtualHost>
