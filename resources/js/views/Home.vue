@@ -32,8 +32,8 @@
             }
         },
         mounted(){
-            const element = document.getElementById('XX');
-            element.classList.add('animate__animated', 'animate__fadeInUp');
+            // const element = document.getElementById('XX');
+            // element.classList.add('animate__animated', 'animate__fadeInUp');
             axios.get("api/products/")
             .then(response => {
                 this.products = response.data
