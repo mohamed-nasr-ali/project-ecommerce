@@ -46,7 +46,7 @@
             }
         },
         mounted(){
-            this.isLoggedIn = localStorage.getItem('jwt') != null
+            this.isLoggedIn = sessionStorage.getItem('jwt') != null
         },
         beforeMount(){
             axios.get(`/api/products/${this.pid}`)
@@ -56,10 +56,10 @@
             .catch(error => {
                 console.error(error);
             })
-            if(localStorage.getItem('jwt') != null){
-                this.user = JSON.parse(localStorage.getItem('user'))
+            if(sessionStorage.getItem('jwt') != null){
+                this.user = JSON.parse(sessionStorage.getItem('user'))
                 axios.defaults.headers.common['Content-Type'] = 'application/json'
-                axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('jwt')
+                axios.defaults.headers.common['Authorization'] = 'Bearer ' + sessionStorage.getItem('jwt')
             }
         },
         methods : {

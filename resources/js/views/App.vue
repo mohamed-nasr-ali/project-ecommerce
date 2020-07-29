@@ -35,7 +35,7 @@
           return {
             name        : null,
             user_type   : 0,
-            isLoggedIn  : localStorage.getItem('jwt') != null,
+            isLoggedIn  : sessionStorage.getItem('jwt') != null,
               appName:process.env.MIX_APP_NAME
           }
       },
@@ -45,19 +45,20 @@
       methods : {
         setDefaults(){
           if(this.isLoggedIn){
-            const user        = JSON.parse(localStorage.getItem('user'))
+            const user        = JSON.parse(sessionStorage.getItem('user'))
             this.name       = user.name
             this.user_type  = user.is_admin
           }
         },
         change(){
-            this.isLoggedIn = localStorage.getItem('jwt') != null
+            this.isLoggedIn = sessionStorage.getItem('jwt') != null
             this.setDefaults()
 
         },
         logout(){
-            localStorage.removeItem('jwt')
-            localStorage.removeItem('user')
+            sessionStorage.removeItem('jwt')
+            sessionStorage.removeItem('user')
+            sessionStorage.clear();
             this.change()
             this.$router.push('/')
             Swal.fire({
