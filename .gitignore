@@ -1,4 +1,5 @@
-/storage/*.key
+/storage/*
+!/storage/*.key
 /vendor
 .env
 .env.backup
