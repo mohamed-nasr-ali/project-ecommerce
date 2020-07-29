@@ -14,36 +14,32 @@ class ProductTableSeeder extends Seeder
     {
     	$products = [
     		[
-    			'name' => "MEN'S BETTER THAN NAKED&trade; JACKET",
+    			'name' => "Product 1",
     			'description' => "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                 tempor incididunt ut labore et dolore magna aliqua consequat.",
     			'units' => 21,
-    			'price' => 200.10,
-    			'image' => "http://images.thenorthface.com/is/image/TheNorthFace/236x204_CLR/mens-better-than-naked-jacket-AVMH_LC9_hero.png"
+    			'price' => 200.10
     		],
     		[
-    			'name' => "WOMEN'S BETTER THAN NAKED&trade; JACKET",
+    			'name' => "Product 2",
     			'description' => "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                 tempor incididunt ut labore et dolore magna aliqua consequat.",
     			'units' => 400,
-    			'price' => 1600.21,
-    			'image' => "http://images.thenorthface.com/is/image/TheNorthFace/236x204_CLR/womens-better-than-naked-jacket-AVKL_NN4_hero.png"
+    			'price' => 1600.21
     		],
     		[
-    			'name' => "WOMEN'S SINGLE-TRACK SHOE",
+    			'name' => "Product 3",
     			'description' => "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                 tempor incididunt ut labore et dolore magna aliqua consequat.",
     			'units' => 37,
-    			'price' => 378.00,
-    			'image' => "http://images.thenorthface.com/is/image/TheNorthFace/236x204_CLR/womens-single-track-shoe-ALQF_JM3_hero.png"
+    			'price' => 378.00
     		],
     		[
-    			'name' => "Enduro Boa&reg; Hydration Pack",
+    			'name' => "Product 4",
     			'description' => "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                 tempor incididunt ut labore et dolore magna aliqua consequat.",
     			'units' => 10,
-    			'price' => 21.10,
-    			'image' => "http://images.thenorthface.com/is/image/TheNorthFace/236x204_CLR/enduro-boa-hydration-pack-AJQZ_JK3_hero.png"
+    			'price' => 21.10
     		]
     	];
 

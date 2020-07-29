@@ -11,7 +11,7 @@
                                 <label for="email" class="col-sm-4 col-form-label text-md-right">E-Mail Address</label>
 
                                 <div class="col-md-6">
-                                    <input id="email" type="email" class="form-control" v-model="email" required autofocus>
+                                    <input id="email" maxlength="100" type="email" class="form-control" v-model="email" required autofocus>
                                 </div>
                             </div>
 

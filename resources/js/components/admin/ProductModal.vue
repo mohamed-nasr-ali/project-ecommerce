@@ -13,25 +13,25 @@
               <div class="form-group row">
                   <label for="staticName" class="col-sm-2 col-form-label">Name</label>
                   <div class="col-sm-10">
-                      <input type="text" v-model="data.name" class="form-control" id="staticName" placeholder="Product Name">
+                      <input type="text" maxlength="20" v-model="data.name" class="form-control" id="staticName" placeholder="Product Name">
                   </div>
               </div>
               <div class="form-group row">
                   <label for="inputUnits" class="col-sm-2 col-form-label">Units</label>
                   <div class="col-sm-10">
-                      <input type="text" v-model="data.units" class="form-control" id="inputUnits" placeholder="Units">
+                      <input type="text" maxlength="20" v-model="data.units" class="form-control" id="inputUnits" placeholder="Units">
                   </div>
               </div>
               <div class="form-group row">
                   <label for="inputPrice" class="col-sm-2 col-form-label">Price</label>
                   <div class="col-sm-10">
-                      <input type="text" v-model="data.price" class="form-control" id="inputPrice" placeholder="Price">
+                      <input type="text" maxlength="20" v-model="data.price" class="form-control" id="inputPrice" placeholder="Price">
                   </div>
               </div>
               <div class="form-group row">
                   <label for="inputDescription" class="col-sm-2 col-form-label">Description</label>
                   <div class="col-sm-10">
-                      <textarea class="form-control" id="inputDescription" v-model="data.description" placeholder="description"></textarea>
+                      <textarea class="form-control" maxlength="500" id="inputDescription" v-model="data.description" placeholder="description"></textarea>
                   </div>
               </div>
               <div class="form-group row">

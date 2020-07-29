@@ -96,7 +96,8 @@
                     units: product.units,
                     price: product.price,
                     description: product.description,
-                    image: product.image
+                    image: product.image,
+                    product_id:product.id
                 })
                 .then(response => {
                     this.products[index] = product
@@ -113,11 +114,11 @@
                 const checkProperties = product => {
                     for (var key in product) {
                         if (product[key] !== null && product[key] !== "")
-                            return false;
+                            return true;
                     }
-                    return true;
+                    return false;
                 }
-                if (!checkProperties(product)) {
+                if (checkProperties(product)) {
                     axios.post("/api/products/", {
                         name: product.name,
                         units: product.units,
@@ -125,17 +126,23 @@
                         description: product.description,
                         image: product.image || 'ecommerce_products_images/default.jpeg'
                     })
-                        .then(response => {
-                            this.products.push(product)
-                            document.getElementById('file').value = "";
-                        })
-                        .catch(response => {
-                            console.log(response)
-                        })
-                    Toast.fire({
-                        icon: 'success',
-                        title: 'add Product successfully'
+                    .then(response => {
+                        this.products.push(product)
+                        document.getElementById('file').value = "";
+                        Toast.fire({
+                            icon: 'success',
+                            title: 'add Product successfully'
+                        });
                     })
+                    .catch(response => {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Oops...',
+                            text: 'Product Data Are Not Complete!'
+                        })
+                    })
+
+                    document.getElementById('file').value = "";
                 }
             },
             deleteItem(id) {

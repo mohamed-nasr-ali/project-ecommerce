@@ -23,13 +23,25 @@ class ProductStoreRequest extends BaseFormRequest
      */
     public function rules()
     {
+        if (request('product_id')){
+
             return [
-                'name' => 'required|string|min:3|max:255',
+                'name' => 'required|string|min:3|max:255|unique:products,name,'.request('product_id'),
                 'description' => 'required|string|max:255',
-                'units' => 'required|numeric',
-                'price' => 'required|numeric',
+                'units' => 'required|numeric|gte:1',
+                'price' => 'required|numeric|gte:1',
                 'image' => 'string',
             ];
+        }else{
+
+            return [
+                'name' => 'required|string|min:3|max:255|unique:products,name',
+                'description' => 'required|string|max:255',
+                'units' => 'required|numeric|gte:1',
+                'price' => 'required|numeric|gte:1',
+                'image' => 'string',
+            ];
+        }
 
 
     }

@@ -15,12 +15,16 @@ class CreateOrdersTable extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('product_id');
-            $table->unsignedInteger('user_id');
+            $table->unsignedInteger('product_id')->nullable();
+            $table->unsignedInteger('user_id')->nullable();
             $table->unsignedInteger('quantity');
             $table->string('address');
             $table->boolean('is_delivered')->default(false);
             $table->timestamps();
+            $table->foreign('product_id')->references('id')->on('products')
+                ->onUpdate('cascade');
+            $table->foreign('user_id')->references('id')->on('users')
+                ->onUpdate('cascade');
         });
     }
 
@@ -31,6 +35,11 @@ class CreateOrdersTable extends Migration
      */
     public function down()
     {
+        Schema::table('agents', function (Blueprint $table) {
+            $table->dropForeign('orders_product_id_foreign');
+            $table->dropForeign('orders_user_id_foreign');
+
+        });
         Schema::dropIfExists('orders');
     }
 }

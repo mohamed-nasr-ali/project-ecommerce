@@ -25,7 +25,7 @@ class OrderUpdateRequest extends BaseFormRequest
     {
 
             return [
-                'quantity' => 'required|numeric'
+                'quantity' => 'required|numeric|gte:1'
             ];
 
 

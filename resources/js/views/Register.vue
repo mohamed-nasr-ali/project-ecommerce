@@ -12,7 +12,7 @@
                                 <label for="name" class="col-md-4 col-form-label text-md-right">Name</label>
 
                                 <div class="col-md-6">
-                                    <input id="name" type="text" class="form-control" v-model="name" required autofocus>
+                                    <input id="name"  maxlength="100" type="text" class="form-control" v-model="name" required autofocus>
                                 </div>
                             </div>
 
@@ -20,7 +20,7 @@
                                 <label for="email" class="col-md-4 col-form-label text-md-right">E-Mail Address</label>
 
                                 <div class="col-md-6">
-                                    <input id="email" type="email" class="form-control" v-model="email" required>
+                                    <input id="email"  maxlength="100" type="email" class="form-control" v-model="email" required>
                                 </div>
                             </div>
 

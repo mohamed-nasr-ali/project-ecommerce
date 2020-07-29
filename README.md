@@ -62,7 +62,10 @@ $ composer install
 ### Run the application
 
   ```$ php artisan serve```
-
+  - Admin Email:
+    ```admin@devtest.com```
+  - Admin pass:
+    ```secret```
 
 ## Built With
 * [Laravel](https://laravel.com) - The PHP framework for building the API endpoints needed for the application

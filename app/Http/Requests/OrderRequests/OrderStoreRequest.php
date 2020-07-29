@@ -26,7 +26,7 @@ class OrderStoreRequest extends BaseFormRequest
 
             return [
                 'product_id' => 'required|numeric|exists:products,id',
-                'quantity' => 'required|numeric',
+                'quantity' => 'required|numeric|gte:1',
                 'address' => 'required|string|max:255'
             ];
 

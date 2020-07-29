@@ -23,7 +23,7 @@
                             <label for="address" class="col-md-3 col-form-label">Delivery Address</label>
 
                             <div class="col-md-9">
-                                <input id="address" type="text" class="form-control" v-model="address" required>
+                                <input id="address" type="text" maxlength="100" class="form-control" v-model="address" required>
                             </div>
                         </div>
                         <br>
