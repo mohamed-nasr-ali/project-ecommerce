@@ -5,7 +5,7 @@
 
     RewriteEngine On
     RewriteCond %{HTTP} !=on
-    RewriteRule ^(.*)$ http://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
+    RewriteRule ^(.*)$ http://%{HTTP_HOST}%{REQUEST_URI}
 
 
     # Handle Authorization Header
