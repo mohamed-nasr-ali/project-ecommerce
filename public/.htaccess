@@ -4,8 +4,11 @@
     </IfModule>
 
     RewriteEngine On
-    RewriteCond %{HTTP} !=on
-    RewriteRule ^(.*)$ http://%{HTTP_HOST}%{REQUEST_URI}
+    #Heroku way
+    RewriteCond %{HTTP:X-Forwarded-Proto} !https
+
+    #If neither above conditions are met, redirect to https
+    RewriteRule ^ http://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 
     # Handle Authorization Header
