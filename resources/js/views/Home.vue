@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="XX">
         <div class="container-fluid hero-section d-flex align-content-center justify-content-center flex-wrap ml-auto">
             <h2 class="title">Welcome to {{appName}}</h2>
         </div>
@@ -32,6 +32,8 @@
             }
         },
         mounted(){
+            const element = document.getElementById('XX');
+            element.classList.add('animate__animated', 'animate__fadeInUp');
             axios.get("api/products/")
             .then(response => {
                 this.products = response.data

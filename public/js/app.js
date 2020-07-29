@@ -2756,6 +2756,8 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     var _this = this;
 
+    var element = document.getElementById('XX');
+    element.classList.add('animate__animated', 'animate__fadeInUp');
     axios.get("api/products/").then(function (response) {
       _this.products = response.data;
     })["catch"](function (error) {
@@ -65095,7 +65097,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
+  return _c("div", { attrs: { id: "XX" } }, [
     _c(
       "div",
       {

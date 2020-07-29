@@ -24,7 +24,10 @@
 
     <!--fontawesome-->
     <script src="https://kit.fontawesome.com/958f62c7f8.js" crossorigin="anonymous"></script>
-
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+    />
 </head>
 <body>
     <div id="app">
