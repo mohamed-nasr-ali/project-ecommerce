@@ -1,0 +1,14 @@
+/storage/*.key
+/vendor
+.env
+.env.backup
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+node_modules/
+.idea
+/public/ecommerce_products_images/*
+!/public/ecommerce_products_images/default.jpeg
+!/public/ecommerce_products_images/logout.gif
